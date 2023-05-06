@@ -8,7 +8,7 @@ export const AnimatedCursor: React.FC = () => {
       innerScale={0.6}
       outerScale={2.5}
       color='83, 91, 242'
-      showSystemCursor={true}
+      showSystemCursor={false}
       type={1}
     />
   )
