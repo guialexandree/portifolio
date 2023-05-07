@@ -1,11 +1,12 @@
 
 .navbar-container {
+  width: 100%;
+  position: fixed;
   justify-content: center;
 
   li {
-    padding: 6px 24px;
-
     & > a {
+      padding: 6px 24px;
       color: #fff;
       text-decoration: inherit;
       font-size: 15px;
