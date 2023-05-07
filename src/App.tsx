@@ -1,5 +1,8 @@
-import { AnimatedCursor, Background, Home } from '@/components'
-import './App.scss'
+import { lazy } from 'react'
+import { AnimatedCursor, Background, MidiasSociais } from '@/components'
+
+const HomePage = lazy(() => import('@/pages/Home') )
+const Resume = lazy(() => import('@/pages/Resume') )
 
 function App() {
 
@@ -7,7 +10,9 @@ function App() {
     <>
       <AnimatedCursor />
       <Background />
-      <Home />
+      <HomePage />
+      <Resume />
+      <MidiasSociais />
     </>
   )
 }
