@@ -1,11 +1,10 @@
 import { TypeAnimation } from 'react-type-animation'
-import { LinkedinLogo, GithubLogo, TwitchLogo } from '@phosphor-icons/react'
 import './styles.scss'
 
 export const Header: React.FC = () => {
   return (
     <section className='header-container'>
-      <section className='header-content'>
+      <hgroup className='header-content'>
         <h3>olá!</h3>
         <h1>sou guilherme,</h1>
         <h4>{'desenvovedor '}
@@ -28,11 +27,20 @@ export const Header: React.FC = () => {
           />
         </h4>
         <a href='#projetos'>ver projetos</a>
-      </section>
-      <section className='header-social-midias'>
-        <LinkedinLogo size={40} />
-        <GithubLogo size={40} />
-        <TwitchLogo size={40} />
+      </hgroup>
+      <section className='header-infos'>
+        <article>
+          <h2>E-mail</h2>
+          <p>guilherme_alexandree@hotmail.com</p>
+        </article>
+        <article>
+          <h2>WhatsApp</h2>
+          <p>(45) 9 9987-2483</p>
+        </article>
+        <article>
+          <h2>Localização</h2>
+          <p>São Paulo, SP - Brasil</p>
+        </article>
       </section>
     </section>
   )
