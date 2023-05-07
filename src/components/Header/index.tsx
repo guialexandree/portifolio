@@ -1,4 +1,5 @@
 import { TypeAnimation } from 'react-type-animation'
+import { LinkedinLogo, GithubLogo, TwitchLogo } from '@phosphor-icons/react'
 import './styles.scss'
 
 export const Header: React.FC = () => {
@@ -26,7 +27,12 @@ export const Header: React.FC = () => {
             style={{ fontSize: 33, fontWeight: 300 }}
           />
         </h4>
-        <button>entrar em contato</button>
+        <a href='#projetos'>ver projetos</a>
+      </section>
+      <section className='header-social-midias'>
+        <LinkedinLogo size={40} />
+        <GithubLogo size={40} />
+        <TwitchLogo size={40} />
       </section>
     </section>
   )
