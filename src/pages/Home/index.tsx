@@ -3,7 +3,7 @@ import './styles.scss'
 
 const Home: React.FC = () => {
   return (
-    <section className='home-container'>
+    <section className='home-container' id="home">
       <AppBar />
       <Header />
     </section>
