@@ -32,7 +32,7 @@
 
   svg {
     opacity: 0.7;
-    transition: color opacity ease-in 0.3s;
+    transition: all ease-in 0.3s;
 
     &:hover {
       color: #646cff;
