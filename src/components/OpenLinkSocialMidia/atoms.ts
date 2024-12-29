@@ -1,6 +1,9 @@
 import { atom } from 'recoil'
 
-export const linkSocialMidiaState = atom({
-  key: 'linkSocialMidiaState',
-  default: ''
+export const selectedSocialMidiaState = atom({
+  key: 'selectedSocialMidiaState',
+  default: {
+    link: '',
+    type: 'github' as 'github' | 'linkedin' | 'email'
+  }
 })

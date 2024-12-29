@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
   const deviceType = useDeviceType()
 
   return (
-    <Stack spacing={2} mx={deviceType === 'mobile' ? 4 : 6} mt={8} flex={1}>
+    <Stack spacing={2} mx={deviceType === 'mobile' ? 2 : 6} mt={8} flex={1}>
       <Stack ml={deviceType === 'mobile' ? 0 : 3} >
         <Title title="projetos" subtitle="projetos" />
       </Stack>

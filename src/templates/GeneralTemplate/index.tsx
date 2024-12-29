@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { AnimatedCursor, AppBar, OpenLinkSocialMidia, ThemeProvider } from '@/components'
+import { useDeviceType } from '@/hooks'
 import './styles.scss'
 
 type GeneralTemplateProps = {
@@ -7,10 +8,12 @@ type GeneralTemplateProps = {
 }
 
 export const GeneralTemplate: React.FC<GeneralTemplateProps> = (props) => {
+  const deviceType = useDeviceType()
+
   return (
     <ThemeProvider>
       <AppBar />
-      <AnimatedCursor />
+      {deviceType !== 'mobile' && <AnimatedCursor />}
       <OpenLinkSocialMidia />
 
       <Box

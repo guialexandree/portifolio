@@ -1,16 +1,29 @@
-import { Icon, Paper, Stack, Typography } from '@mui/material'
+import { Icon, Paper, Stack, styled, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { useSetRecoilState } from 'recoil'
-import { linkSocialMidiaState } from '../OpenLinkSocialMidia/atoms'
+import { selectedSocialMidiaState } from '../OpenLinkSocialMidia/atoms'
 import { socialMidias } from '@/_mocks/social-midias'
 
 type ItemSocialMidiaProps = {
   type: 'linkedin' | 'github' | 'email'
 }
 
+const ContainerSyle = styled(Paper)(({ theme }) => ({
+  padding: '8px 20px',
+  gap: 4,
+  display: 'flex',
+  borderColor: 'transparent',
+  color: theme.palette.grey[600],
+  '&:hover': {
+    transition: 'all 1s',
+    color: theme.palette.grey[200],
+    borderColor: theme.palette.grey[800],
+  },
+}))
+
 export const ItemSocialMidia: React.FC<ItemSocialMidiaProps> = (props) => {
-  const setOpenLink = useSetRecoilState(linkSocialMidiaState)
+  const setSocialMidia = useSetRecoilState(selectedSocialMidiaState)
 
   const typeLabel = {
     linkedin: 'linkedin',
@@ -26,30 +39,15 @@ export const ItemSocialMidia: React.FC<ItemSocialMidiaProps> = (props) => {
 
 
   return (
-    <Paper
+    <ContainerSyle
       variant='outlined'
       id='item-project'
-      onClick={() => setOpenLink(socialMidias[props.type])}
-      sx={{
-        gap: 1,
-        py: 1,
-        px: 2,
-        borderRadius: 1,
-        backgroundColor: 'background.paper',
-        display: 'flex',
-        borderColor: 'transparent',
-        color: 'grey.600',
-        '&:hover': {
-          color: 'grey.200',
-          transition: 'all 0.3s',
-          borderColor: 'grey.800',
-        },
-      }}
+      onClick={() => setSocialMidia({ link: socialMidias[props.type], type: props.type })}
     >
       {typeIcon}
       <Stack justifyContent='center'>
         <Typography variant='caption' sx={{ lineHeight: 1 }}>{typeLabel}</Typography>
       </Stack>
-    </Paper>
+    </ContainerSyle>
   )
 }
