@@ -1,0 +1,22 @@
+.container-root {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      rgba(159, 159, 159, 0.13),
+      rgba(159, 159, 159, 0.13)
+    ),
+    linear-gradient(
+      to right,
+      rgba(159, 159, 159, 0.13),
+      rgba(159, 159, 159, 0.13)
+    ),
+    linear-gradient(
+      to right,
+      rgba(159, 159, 159, 0.13),
+      rgba(159, 159, 159, 0.13)
+    );
+
+  background-position: 25% 0, 50% 0, 75% 0;
+
+  background-size: 1px 100%, 1px 100%, 1px 100%;
+}

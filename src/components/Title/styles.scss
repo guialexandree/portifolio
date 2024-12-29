@@ -2,7 +2,7 @@
   position: relative;
 
   h1 {
-    font-size: 36px;
+    font-size: 46px;
     font-weight: 700;
     letter-spacing: -0.25px;
     line-height: 100%;
@@ -13,15 +13,29 @@
     position: absolute;
     left: -6px;
     color: transparent;
-    font-size: 110px;
+    font-size: 100px;
     font-weight: 900;
-    opacity: .2;
-    line-height: 1;
+    opacity: 0.2;
     max-width: 100%;
     white-space: nowrap;
     -webkit-text-stroke: 1px #fff;
-    bottom: -30px;
+    bottom: -20px;
     z-index: -1;
     text-transform: uppercase;
   }
-} 
+}
+
+@media screen and (max-width: 600px) {
+  .title-container {
+    position: relative;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .text-shadow {
+      bottom: -10px;
+      font-size: 4rem;
+    }
+  }
+}

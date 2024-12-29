@@ -1,12 +1,10 @@
-import { Header, AppBar } from '@/components'
-import './styles.scss'
+import { PresentationTexts } from '@/components'
 
 const Home: React.FC = () => {
   return (
-    <section className='home-container' id="home">
-      <AppBar />
-      <Header />
-    </section>
+    <>
+      <PresentationTexts />
+    </>
   )
 }
 
