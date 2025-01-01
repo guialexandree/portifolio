@@ -38,7 +38,7 @@ const Resume: React.FC = () => {
         px: deviceType === 'mobile' ? 4 : 8,
         width: '100%',
         minHeight: '40vh',
-        backgroundImage: 'linear-gradient(135deg, rgba(51,153,255,1) 0%, rgba(51,153,255,1) 64%, rgba(22,106,190,1) 100%)',
+        backgroundImage: 'linear-gradient(135deg, rgba(51,153,255,1) 0%, rgba(22,106,190,1) 100%)',
       }}
     >
       <Stack justifyContent='center'>
