@@ -7,7 +7,6 @@ import { useSetRecoilState } from 'recoil'
 import { socialMidias } from '@/_mocks'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Bar } from 'react-chartjs-2'
-import { BarController } from 'chart.js'
 
 const ContainerSyle = styled(Paper)(({ theme }) => {
   const backgroundHover = lighten(theme.palette.primary.main, 0.1)
@@ -166,7 +165,7 @@ const Resume: React.FC = () => {
                 }}
               />
 
-            {/* <ContainerSyle>
+            <ContainerSyle>
               <Typography variant='h5' fontWeight='600' sx={{ mt: { xs: 3, sm: 0 }}}>
                 FRONTEND
               </Typography>
@@ -217,7 +216,7 @@ const Resume: React.FC = () => {
               <Stack direction='row'mt={2} flexWrap='wrap' gap={1} >
                 <Chip label='C#' sx={{ borderRadius: 1 }} />
               </Stack>
-            </ContainerSyle> */}
+            </ContainerSyle>
 
           </Stack>
         </Grid2>
