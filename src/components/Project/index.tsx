@@ -1,4 +1,4 @@
-import { ProjectModel } from '@/_mocks/projects'
+import { ProjectModel } from '@/_mocks'
 import { useDeviceType } from '@/hooks'
 import { Button, Chip, Grid2, Icon, Paper, Stack, Typography } from '@mui/material'
 import { ItemProject } from '@/components'
@@ -14,6 +14,7 @@ export const Project: React.FC<ProjectsProps> = (props) => {
     <Paper
       onClick={() => console.log('click')}
       sx={{
+        flex: 1,
         backgroundColor: theme => `${theme.palette.background.paper}cc`,
         display: 'flex',
         flexDirection: 'column',
@@ -91,7 +92,7 @@ export const Project: React.FC<ProjectsProps> = (props) => {
       {!!props.project?.tags?.length &&
         <Stack direction='row' flexWrap='wrap' gap={1} mt={3}>
           {props.project.tags.map(tag =>
-            <Chip label={tag} size='small' />
+            <Chip key={tag} label={tag} size='small' />
           )}
         </Stack>
       }

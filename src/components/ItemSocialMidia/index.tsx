@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { useSetRecoilState } from 'recoil'
 import { selectedSocialMidiaState } from '../OpenLinkSocialMidia/atoms'
-import { socialMidias } from '@/_mocks/social-midias'
+import { socialMidias } from '@/_mocks'
 
 type ItemSocialMidiaProps = {
   type: 'linkedin' | 'github' | 'email'
@@ -15,6 +15,7 @@ const ContainerSyle = styled(Paper)(({ theme }) => ({
   display: 'flex',
   borderColor: 'transparent',
   color: theme.palette.grey[600],
+  cursor: 'pointer',
   '&:hover': {
     transition: 'all 1s',
     color: theme.palette.grey[200],

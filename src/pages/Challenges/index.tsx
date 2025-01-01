@@ -1,7 +1,7 @@
 import { Grid2, Stack } from '@mui/material'
-import { Project, Title } from '@/components'
+import { Title } from '@/components'
 import { useDeviceType } from '@/hooks'
-import { challengers } from '@/_mocks/projects'
+import { challenges } from '@/_mocks'
 
 const Challenges: React.FC = () => {
   const deviceType = useDeviceType()
@@ -13,9 +13,8 @@ const Challenges: React.FC = () => {
       </Stack>
 
       <Grid2 container spacing={deviceType === 'mobile' ? 2 : 4}>
-        {challengers.map(project => (
-          <Grid2 key={project.title} size={{ xs: 12, sm: 12, md: 6 }}  display='flex'>
-            <Project project={project} />
+        {challenges.map(challenge => (
+          <Grid2 key={challenge.id} size={{ xs: 12, sm: 12, md: 6 }}  display='flex'>
           </Grid2>
         ))}
       </Grid2>

@@ -42,7 +42,7 @@ export const PresentationTexts: React.FC = () => {
       </Typography>
 
       <BrandName id='presentation-texts-title' />
-      <Divider sx={{ my: 3,  borderColor: theme => `${theme.palette.warning.main}80` }} />
+      <Divider sx={{ my: 3,  borderColor: theme => `${theme.palette.secondary.main}80` }} />
 
       <Stack spacing={1}>
         <Stack direction='row' alignItems='center' pb={1}>

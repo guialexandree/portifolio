@@ -30,7 +30,7 @@ export const ItemProject: React.FC<ItemProjectsProps> = (props) => {
         display: 'flex',
       }}
     >
-      <Icon color='warning' sx={{  fontSize: 30 }}>{typeIcon}</Icon>
+      <Icon color='secondary' sx={{  fontSize: 30 }}>{typeIcon}</Icon>
       <Stack justifyContent='center'>
         {props.type !== 'api' && <Typography variant='caption'>app</Typography>}
         <Typography variant='caption' sx={{ lineHeight: 1 }}>{typeLabel}</Typography>

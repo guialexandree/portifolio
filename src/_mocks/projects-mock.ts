@@ -51,26 +51,3 @@ export const projects: ProjectModel[] = [
     }
   },
 ]
-
-export const challengers: ProjectModel[] = [
-  {
-    title: 'Portal do cliente',
-    description: 'Sistema de gestão de barbearia formado por aplicativo mobile para o cliente e aplicativo web para o administrador',
-    tags: ['pwa','react-native', 'react-native-web', 'typescript'],
-    platforms: {
-      web: true,
-      mobile: true,
-      api: true
-    }
-  },
-  {
-    title: 'Gesão de equipe técnica',
-    description: 'Pagina web de um clube automotivo feminino com sistema de cadastro de membros e eventos, e um blog para postagens',
-    tags: ['app web', 'typescript', 'react', 'google-maps-api'],
-    platforms: {
-      web: true,
-      mobile: true,
-      api: true
-    }
-  },
-]

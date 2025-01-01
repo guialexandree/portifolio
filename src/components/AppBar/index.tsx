@@ -52,9 +52,10 @@ export const AppBar: React.FC = () => {
           <Stack direction='row' flex={1} justifyContent='flex-end'>
             <Button
               variant='contained'
-              color='secondary'
+              sx= {{ backgroundColor: 'grey.800', color: '#fff' }}
               endIcon={<Icon color='primary'>diamond</Icon>}
-          >
+              href='#projects'
+            >
             projetos
           </Button>
           </Stack>

@@ -1,19 +1,17 @@
 import { Box } from '@mui/material'
-import { AnimatedCursor, AppBar, OpenLinkSocialMidia, ThemeProvider } from '@/components'
-import { useDeviceType } from '@/hooks'
+import { AppBar, OpenLinkSocialMidia, ThemeProvider } from '@/components'
 import './styles.scss'
+import 'chart.js/auto'
 
 type GeneralTemplateProps = {
   children: React.ReactNode
 }
 
 export const GeneralTemplate: React.FC<GeneralTemplateProps> = (props) => {
-  const deviceType = useDeviceType()
 
   return (
     <ThemeProvider>
       <AppBar />
-      {deviceType !== 'mobile' && <AnimatedCursor />}
       <OpenLinkSocialMidia />
 
       <Box

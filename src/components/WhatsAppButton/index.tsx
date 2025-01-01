@@ -16,10 +16,11 @@ export const WhatsAppButton: React.FC = () => {
         display: 'flex',
         cursor: 'pointer',
         width: 230,
+        transition: 'all 0.3s',
         color: 'grey.600',
         '&:hover': {
           color: 'success.main',
-          transition: 'all 0.3s',
+          transform: 'translateX(4px)',
         }
       }}
     >
