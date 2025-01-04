@@ -61,7 +61,7 @@ const Resume: React.FC = () => {
               </TabList>
             </Box>
 
-            <TabPanel value="general" sx={{ px: 0 }}>
+            <TabPanel value='professional' sx={{ px: 0 }}>
               {resumes[0].description.map((descriptionProps, index) => (
                 <Stack key={index} spacing={1} mb={3}>
                   <Typography variant='body1' fontWeight='300' >
@@ -123,7 +123,7 @@ const Resume: React.FC = () => {
                 </Stack>
               </Stack>
             </TabPanel>
-            <TabPanel value="2">Item Two</TabPanel>
+            <TabPanel value='academic'>Item Two</TabPanel>
           </TabContext>
         </Grid2>
 
