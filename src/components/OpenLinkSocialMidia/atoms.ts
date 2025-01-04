@@ -4,6 +4,6 @@ export const selectedSocialMidiaState = atom({
   key: 'selectedSocialMidiaState',
   default: {
     link: '',
-    type: 'github' as 'github' | 'linkedin' | 'email'
+    type: 'github' as 'github' | 'linkedin' | 'email' | 'whatsapp'
   }
 })

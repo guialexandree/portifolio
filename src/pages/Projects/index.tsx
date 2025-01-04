@@ -1,5 +1,5 @@
 import { Grid2, Stack } from '@mui/material'
-import { Project, Title } from '@/components'
+import { OpenProjectDetails, Project, Title } from '@/components'
 import { useDeviceType } from '@/hooks'
 import { projects } from '@/_mocks'
 
@@ -19,6 +19,8 @@ const Projects: React.FC = () => {
           </Grid2>
         ))}
       </Grid2>
+
+      <OpenProjectDetails />
 
       {/* <Swiper
         spaceBetween={30}

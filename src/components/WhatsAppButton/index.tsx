@@ -15,7 +15,7 @@ export const WhatsAppButton: React.FC = () => {
         backgroundColor: 'background.paper',
         display: 'flex',
         cursor: 'pointer',
-        width: 230,
+        width: { xs: '100%', md: 230 },
         transition: 'all 0.3s',
         color: 'grey.600',
         '&:hover': {
@@ -26,7 +26,7 @@ export const WhatsAppButton: React.FC = () => {
     >
       <WhatsAppIcon color='success' />
       <Stack justifyContent='center'>
-        <Typography variant='caption' sx={{ lineHeight: 1 }}>
+        <Typography variant='caption' sx={{ lineHeight: 1, fontSize: 14 }} >
           conversar no whatsapp
         </Typography>
       </Stack>

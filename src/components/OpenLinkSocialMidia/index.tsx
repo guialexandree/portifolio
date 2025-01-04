@@ -12,13 +12,15 @@ export const OpenLinkSocialMidia: React.FC = () => {
   const titleType = {
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    email: 'E-mail'
+    email: 'E-mail',
+    whatsapp: 'WhatsApp'
   }[selectedSocialMidia.type]
 
   const imgType = {
     github: gitHubImg,
     linkedin: linkedinImg,
-    email: ''
+    email: '',
+    whatsapp: ''
   }[selectedSocialMidia.type]
 
   const handleOpenLink = (): void => {
@@ -32,7 +34,7 @@ export const OpenLinkSocialMidia: React.FC = () => {
 
   return (
     <Dialog
-      open={!!selectedSocialMidia.link}
+      open={!!selectedSocialMidia.link && selectedSocialMidia.type !== 'whatsapp'}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
