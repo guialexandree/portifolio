@@ -11,6 +11,16 @@ export type ProjectModel = {
 
 export const projects: ProjectModel[] = [
   {
+    title: 'Arcanjo',
+    description: 'Aplicação web com mapa para apoio em localizações de pessoas desaparecidas em situações de calamidade, com sistema para enviar localização atual com possibilidade de enviar foto e audio solicitando apoio, cadastro de pessoas desaparecidas e localização de abrigos',
+    tags: ['typescript', 'react'],
+    platforms: {
+      web: true,
+      mobile: true,
+      api: true
+    }
+  },
+  {
     title: 'Susu Barbearia',
     description: 'Sistema de gestão de barbearia formado por aplicativo mobile para o cliente e aplicativo web para o administrador',
     tags: ['react-native', 'react', 'react-reanimated', 'node', 'typescript', 'nestjs'],

@@ -33,7 +33,7 @@ const Challenges: React.FC = () => {
             <Stack>
               <Alert icon={<Icon>sports_score</Icon>} severity='warning' sx={{ boxShadow: 3 }}>
                 <Typography variant='h6' mb={2} fontWeight='600'>
-                  DESAFIO
+                  DESAFIO {challenge.id}
                 </Typography>
                 <Typography variant='body2'>
                   {challenge.challenge}
