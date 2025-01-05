@@ -1,4 +1,4 @@
-import { Icon, Paper, Stack, styled, Typography } from '@mui/material'
+import { Paper, Stack, styled, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { useSetRecoilState } from 'recoil'
