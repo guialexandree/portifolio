@@ -1,6 +1,7 @@
 import { Grid2, Stack } from '@mui/material'
-import { OpenProjectDetails, Project, Title } from '@/components'
 import { useDeviceType } from '@/hooks'
+import { Title } from '@/components'
+import { Project, OpenProjectDetails } from '@/pages/Projects/components'
 import { projects } from '@/_mocks'
 
 const Projects: React.FC = () => {

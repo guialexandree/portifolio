@@ -1,35 +1,50 @@
-import { Paper, Stack, Typography } from '@mui/material'
+import { useSetRecoilState } from 'recoil'
+import { Button } from '@mui/material'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import { selectedSocialMidiaState } from '@/components/atoms'
+import { LinkButton } from '@/components'
+import { useDeviceType } from '@/hooks'
+import { socialMidias } from '@/_mocks'
 
-export const WhatsAppButton: React.FC = () => {
+type WhatsAppButtonProps = {
+  variant?: 'square' | 'rounded'
+}
+
+export const WhatsAppButton: React.FC<WhatsAppButtonProps> = (props) => {
+  const setLink = useSetRecoilState(selectedSocialMidiaState)
+  const deviceType = useDeviceType()
+
+  if (props.variant === 'rounded') {
+    return (
+      <LinkButton
+        icon={<WhatsAppIcon sx={{ fontSize: 24 }} />}
+        label='chamar no whatsapp'
+        onClick={() => { setLink({ link: socialMidias.linkedin, type: 'whatsapp' }) }}
+      />
+    )
+  }
+
   return (
-    <Paper
-      onClick={() => console.log('click')}
-      variant='outlined'
+    <Button
+      startIcon={<WhatsAppIcon color='success' />}
+      onClick={() => { setLink({ link: socialMidias.whatsapp, type: 'whatsapp' }) }}
+      fullWidth={deviceType === 'mobile'}
       id='item-project'
       sx={{
-        gap: 1,
         py: 1,
-        px: 2,
-        borderRadius: 8,
-        backgroundColor: 'background.paper',
-        display: 'flex',
-        cursor: 'pointer',
-        width: { xs: '100%', md: 230 },
-        transition: 'all 0.3s',
+        px: 3,
         color: 'grey.600',
+        backgroundColor: 'background.paper',
+        textTransform: 'none',
+        fontSize: 14,
+        transition: 'all 0.3s',
         '&:hover': {
           color: 'success.main',
           transform: 'translateX(4px)',
         }
       }}
     >
-      <WhatsAppIcon color='success' />
-      <Stack justifyContent='center'>
-        <Typography variant='caption' sx={{ lineHeight: 1, fontSize: 14 }} >
-          conversar no whatsapp
-        </Typography>
-      </Stack>
-    </Paper>
+      conversar no whatsapp
+    </Button>
   )
 }

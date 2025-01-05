@@ -1,26 +1,25 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Icon, Stack } from '@mui/material'
 import { useRecoilState } from 'recoil'
-import { selectedSocialMidiaState } from './atoms'
 import { useDeviceType } from '@/hooks'
 import gitHubImg from '@/assets/github-header.png'
 import linkedinImg from '@/assets/linkedin-header.png'
+import whatsappImg from '@/assets/whatsapp-header.png'
+import { selectedSocialMidiaState } from '@/components/atoms'
 
 export const OpenLinkSocialMidia: React.FC = () => {
   const deviceType = useDeviceType()
   const [selectedSocialMidia, setSocialMidia] = useRecoilState(selectedSocialMidiaState)
 
   const titleType = {
-    github: 'GitHub',
-    linkedin: 'LinkedIn',
-    email: 'E-mail',
-    whatsapp: 'WhatsApp'
+    github: 'visitar GitHub',
+    linkedin: 'visitar LinkedIn',
+    whatsapp: 'WhatsApp Web'
   }[selectedSocialMidia.type]
 
   const imgType = {
     github: gitHubImg,
     linkedin: linkedinImg,
-    email: '',
-    whatsapp: ''
+    whatsapp: whatsappImg
   }[selectedSocialMidia.type]
 
   const handleOpenLink = (): void => {
@@ -34,7 +33,7 @@ export const OpenLinkSocialMidia: React.FC = () => {
 
   return (
     <Dialog
-      open={!!selectedSocialMidia.link && selectedSocialMidia.type !== 'whatsapp'}
+      open={!!selectedSocialMidia.link}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
@@ -58,7 +57,7 @@ export const OpenLinkSocialMidia: React.FC = () => {
         }
         <Stack>
           <DialogTitle id="alert-dialog-title" sx={{ fontWeight: '900', textTransform: 'uppercase' }}>
-            {`visitar ${titleType}`}
+            {titleType}
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">

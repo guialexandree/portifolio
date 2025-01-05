@@ -1,15 +1,10 @@
-import { useMemo } from 'react'
-import { PresentationTexts } from '@/components'
 import { Box, Grid2, Stack } from '@mui/material'
 import { useDeviceType } from '@/hooks'
-
-import bgHeaderBottomImg from '@/assets/bg-header-bottom.svg'
-import bgHeaderBottomShadowImg from '@/assets/bg-header-bottom-shadow.svg'
+import { Background, PresentationTexts } from '@/pages/Home/components'
 import presentationTextsImg from '@/assets/programming.svg'
 
 const Home: React.FC = () => {
   const deviceType = useDeviceType()
-  const height = useMemo(() => deviceType === 'mobile' ? '65vh' : '65vh', [deviceType])
 
   const PresentationIcon = (): React.ReactNode =>
     <Stack
@@ -38,7 +33,7 @@ const Home: React.FC = () => {
         sx={{
           pt: 7,
           px: deviceType === 'mobile' ? 4 : 8,
-          height: height,
+          height: '65vh',
           width: '100%',
           backgroundColor: '#161616',
           position: 'relative'
@@ -53,27 +48,10 @@ const Home: React.FC = () => {
             </Grid2>
           </Grid2>
 
-        <Box
-          position='absolute'
-          top={`calc(${height} - 30px)`}
-          right={0}
-          width={deviceType === 'mobile' ? '100%' : '65%'}
-          zIndex={2}
-        >
-          <img src={bgHeaderBottomImg} alt="Imagem de fundo" />
-        </Box>
-        <Box
-          position='absolute'
-          top={`calc(${height} - 28px)`}
-          right={'-30%'}
-          width={deviceType === 'mobile' ? '100%' : '65%'}
-          zIndex={1}
-        >
-          <img src={bgHeaderBottomShadowImg} alt="Imagem de fundo" />
-        </Box>
+        <Background />
       </Stack>
 
-      <Grid2 size={{ md: 8 }} display={{ xs: 'block', sm: 'none' }}>
+      <Grid2 display={{ xs: 'block', sm: 'none' }}>
         <PresentationIcon />
       </Grid2>
     </Box>
