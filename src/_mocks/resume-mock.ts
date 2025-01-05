@@ -33,10 +33,10 @@ export const resumes: ResumeModel[] = [
         description: `Em 2018 comecei a trabalhar como HelpDesk depois de um ano consegui
         uma oportunidade como analista de sistemas, onde trabalhei com VBA, C# e bastante com SQL na 
         criação de views e extração de dados em sistemas terceiros para integração com o sistemas da empresa.`,
-        tags: ['desktop', 'frontend', 'backend', 'análise de dados', 'análise de requisitos', 'angular', 'bd relacionais', 'c#', 'js', '.net', 'node']
+        tags: ['desktop', 'frontend', 'backend', 'análise de dados', 'análise de negócio', 'análise de requisitos', 'angular', 'bd relacionais', 'sql', 'c#', 'js', '.net', 'node']
       },
       {
-        description: `Atualmente tenho trabalhado na refatoração e migração de sistemas legados para novas tecnologias, como React, React Native e .NE`,
+        description: `Atualmente tenho trabalhado na refatoração e migração de sistemas legados para novas tecnologias, como React, React Native e .NET`,
         tags: ['frontend', 'backend', 'análise de negócio', 'pwa', 'react', 'angular', 'react-native', '.NET', 'node', 'pipelines ci/cd']
       },
     ],
@@ -52,7 +52,7 @@ export const resumes: ResumeModel[] = [
       ],
       web: [
         'Criação de Apliações Web',
-        'Criação de Apliações com Google Maps',
+        'Criação de Apliações com Mapas',
         'Criação de SPA',
         'Criação de PWA',
         'Notificações Push',
@@ -60,6 +60,8 @@ export const resumes: ResumeModel[] = [
       api: [
         'Criação de api gateway',
         'Criação de api rest',
+        'Criação de websockets',
+        'Microserviços',
       ],
       mobile: [
          'Criação de Apliações Mobile',

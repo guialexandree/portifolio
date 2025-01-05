@@ -26,6 +26,7 @@ const Resume: React.FC = () => {
 
   return (
     <Box
+      id='resume'
       sx={{
         mt: 6,
         flex: 1,

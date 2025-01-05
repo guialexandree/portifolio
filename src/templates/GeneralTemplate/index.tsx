@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { AppBar, OpenLinkSocialMidia, ThemeProvider } from '@/components'
+import { AppBar, Drawer, OpenLinkSocialMidia, ThemeProvider } from '@/components'
 import './styles.scss'
 import 'chart.js/auto'
 
@@ -12,6 +12,7 @@ export const GeneralTemplate: React.FC<GeneralTemplateProps> = (props) => {
   return (
     <ThemeProvider>
       <AppBar />
+      <Drawer />
       <OpenLinkSocialMidia />
 
       <Box

@@ -8,7 +8,7 @@ const Challenges: React.FC = () => {
   const deviceType = useDeviceType()
 
   return (
-    <Stack spacing={2} mx={deviceType === 'mobile' ? 4 : 6} mt={8} flex={1}>
+    <Stack spacing={2} mx={deviceType === 'mobile' ? 4 : 6} mt={8} flex={1} id='challenges'>
       <Stack ml={deviceType === 'mobile' ? 0 : 3}>
         <Title title="desafios" subtitle="desafios" />
       </Stack>

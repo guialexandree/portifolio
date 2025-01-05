@@ -10,7 +10,7 @@ export type ChallengeModel = {
 export const challenges: ChallengeModel[] = [
   {
     id: '1',
-    challenge: 'Pradronizar o plano de contas financeiro de um cliente com diversas filias, cada uma com sua infraestrura interna e base de dados',
+    challenge: 'Padronizar o plano de contas financeiro de um cliente com diversas filias, cada uma com sua infraestrura interna e base de dados',
     because: 'O cliente possui diversas filiais e cada uma delas possui um plano de contas financeiro diferente, o que dificulta a consolidação dos dados financeiros e a geração de relatórios gerenciais para análisar a saúde financeira do grupo e individualmente de cada filial',
     soluction: 'Devido as filias terem um plano de contas financeiro diferente, foi necessário definir um plano de contas padrão, e a partir desse modelo criei um sistema de mapeamento que buscava as contas do plano de contas atual fazia o vinculo com o plano de contas com mesmo nome do plano de contas padrão, e o usuário ficava responsável por vincular as contas que ficaram fora do padrão manualmente',
     requirements: 'Sistema de autenticação; solicitar senha de nível gerencial; e atualizar referências de novas contas financeiras para gerar relatórios gerenciais padronizados',

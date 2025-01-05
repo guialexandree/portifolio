@@ -2,6 +2,8 @@ import React from 'react'
 import { AppBar as AppBarMUI, Button, Icon, IconButton, Stack, Toolbar, useScrollTrigger } from '@mui/material'
 import { BrandName } from '@/components'
 import { useDeviceType } from '@/hooks'
+import { useSetRecoilState } from 'recoil'
+import { isOpenDrawer } from '../Drawer/atoms'
 
 type ElevationScrollProps = {
   window?: () => Window;
@@ -26,6 +28,7 @@ export const ElevationScroll: React.FC<ElevationScrollProps> = (props) => {
 
 export const AppBar: React.FC = () => {
   const deviceType = useDeviceType()
+  const setOpenDrawer = useSetRecoilState(isOpenDrawer)
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -43,6 +46,7 @@ export const AppBar: React.FC = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: deviceType !== 'mobile' ? 2 : 0 }}
+            onClick={() => { setOpenDrawer(true) }}
           >
             <Icon>menu</Icon>
           </IconButton>
