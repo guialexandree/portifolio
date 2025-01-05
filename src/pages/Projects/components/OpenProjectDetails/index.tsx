@@ -1,6 +1,6 @@
+import { selectedSocialMidiaState } from '@/components/atoms'
 import { Box, Modal, Typography } from '@mui/material'
 import { useSetRecoilState } from 'recoil'
-import { selectedSocialMidiaState } from '../OpenLinkSocialMidia/atoms'
 
 export const OpenProjectDetails: React.FC = () => {
   const setSocialMidia = useSetRecoilState(selectedSocialMidiaState)
