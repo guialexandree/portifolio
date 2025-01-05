@@ -6,7 +6,7 @@ import { selectedSocialMidiaState } from '../OpenLinkSocialMidia/atoms'
 import { socialMidias } from '@/_mocks'
 
 type ItemSocialMidiaProps = {
-  type: 'linkedin' | 'github' | 'email'
+  type: 'linkedin' | 'github'
 }
 
 const ContainerSyle = styled(Paper)(({ theme }) => ({
@@ -29,13 +29,11 @@ export const ItemSocialMidia: React.FC<ItemSocialMidiaProps> = (props) => {
   const typeLabel = {
     linkedin: 'linkedin',
     github: 'github',
-    email: 'e-mail',
   }[props.type]
 
   const typeIcon = {
     linkedin: <LinkedInIcon />,
     github: <GitHubIcon />,
-    email: <Icon>email</Icon>,
   }[props.type]
 
 
